@@ -172,7 +172,7 @@ def paying(message):
     if text == '✅ Проверить оплату':
         date, state, payment, action, rub, btc, address = db.get_state(user_id, ['Date', 'State', 'Payment', 'Action',
                                                                                  'AmountRUB', 'AmountBTC', 'Address'])
-        if (datetime.now() - date).seconds // 3600 > 1:
+        if (datetime.now() - date).seconds // 3600 > 24:
             db.set_state(user_id, {'State': ''})
             bot.send_message(user_id,
                              'Ваша операция просрочена. Вы можете начать новую\n\n' + menu_message.format(*get_rates()),
