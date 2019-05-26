@@ -1,0 +1,7 @@
+pyTelegramBotApi
+psycopg2
+flask
+requests
+yandex-money-sdk
+blockchain
+coinbase
